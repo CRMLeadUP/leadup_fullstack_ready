@@ -1,10 +1,11 @@
 import React from "react";
 
-export default function App() {
+function App() {
   return (
-    <div className="p-4 text-xl text-center">
-      <h1>✅ LeadUP CRM está funcionando!</h1>
-      <p className="text-gray-600">Frontend renderizado com sucesso</p>
+    <div className="text-center p-10">
+      <h1 className="text-3xl font-bold text-blue-600">LeadUP CRM está funcionando ✅</h1>
     </div>
   );
 }
+
+export default App;
