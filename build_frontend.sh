@@ -11,6 +11,9 @@ mkdir -p ../templates
 mkdir -p ../static/assets
 
 cp -r dist/assets/* ../static/assets/
-cp dist/index.html ../templates/index.html
+JS_FILE=$(ls dist/assets/*.js | grep -v ".map" | head -n 1 | xargs -n 1 basename)
+CSS_FILE=$(ls dist/assets/*.css | grep -v ".map" | head -n 1 | xargs -n 1 basename)
+
+sed -e "s|__CSS__|$CSS_FILE|" -e "s|__JS__|$JS_FILE|" dist/index.html > ../templates/index.html
 
 echo "✅ Build do frontend finalizado"
