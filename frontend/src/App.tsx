@@ -1,11 +1,9 @@
 import React from "react";
 
-function App() {
+export default function App() {
   return (
-    <div className="text-center p-10">
-      <h1 className="text-3xl font-bold text-blue-600">LeadUP CRM está funcionando ✅</h1>
+    <div className="text-center mt-10 text-xl text-blue-600">
+      LeadUP CRM está funcionando com React + Flask!
     </div>
   );
 }
-
-export default App;
